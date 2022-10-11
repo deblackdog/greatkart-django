@@ -9,7 +9,7 @@ from .models import Cart, CartItem
 def _cart_id(request):
     cart = request.session.session_key
     if not cart:
-        cart = request.session.craete()
+        cart = request.session.create()
     return cart
 
 def add_cart(request, product_id):
